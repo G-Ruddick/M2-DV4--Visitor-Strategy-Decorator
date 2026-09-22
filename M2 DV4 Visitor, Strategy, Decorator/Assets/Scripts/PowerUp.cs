@@ -2,24 +2,24 @@ using UnityEngine;
 
 namespace Pattern.Visitor {
     [CreateAssetMenu(fileName = "PowerUp", menuName = "PowerUp")]
-    public class IBikeElement : ScriptableObject, IVisitor {
+    public class PowerUp : ScriptableObject, IVisitor {
         public string powerupName;
         public GameObject powerupPrefab;
         public string powerupDescription;
 
-        [ToolTip("Fully heal shield")]
+        [Tooltip("Fully heal shield")]
         public bool healShield;
 
         [Range(0.0f, 50.0f)]
-        [ToolTip("Boost turbo settings up to increments of 50/mph")]
+        [Tooltip("Boost turbo settings up to increments of 50/mph")]
         public float turboBoost;
 
         [Range(0.0f, 25.0f)]
-        [ToolTip("Boost weapon range in increments of up to 25 units")]
+        [Tooltip("Boost weapon range in increments of up to 25 units")]
         public int weaponRange;
 
         [Range(0.0f, 50.0f)]
-        [ToolTip("Boost weapon strength in increments of up to 50%")]
+        [Tooltip("Boost weapon strength in increments of up to 50%")]
         public float weaponStength;
 
         public void Visit(BikeShield bikeShield) {

@@ -12,9 +12,9 @@ namespace Pattern.Visitor {
         }
 
         public void Accept(IVisitor visitor) {
-            foreach(IBikeElement element in _bikeElements) [
+            foreach(IBikeElement element in _bikeElements) {
                 element.Accept(visitor);
-            ]
+            }
         }
     }
 }
